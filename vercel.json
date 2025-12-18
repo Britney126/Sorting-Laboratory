@@ -1,7 +1,5 @@
 {
   "functions": {
-    "api/qwen.ts": {
-      "runtime": "nodejs18.x"
-    }
+    "api/qwen.ts": {}
   }
 }
