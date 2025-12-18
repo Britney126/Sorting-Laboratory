@@ -1,0 +1,5 @@
+{
+  "name": "排序算法实验室",
+  "description": "一个全面的排序算法实验平台，对比冒泡、选择、插入、快速和归并排序在不同数据规模和排列下的性能。包含 AI 辅助分析和 Python 代码生成功能。",
+  "requestFramePermissions": []
+}
