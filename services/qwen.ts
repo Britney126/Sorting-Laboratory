@@ -5,7 +5,7 @@ import { BenchmarkResult } from "../types";
  * QwenAI API配置
  */
 const isDev = import.meta.env.DEV;
-const QWEN_API_URL = isDev ? "/api/qwen" : "https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation";
+const QWEN_API_URL = isDev ? "/api/qwen" : "/api/qwen"; // 统一使用代理路径
 const QWEN_MODEL = "qwen-turbo";
 
 /**
@@ -20,11 +20,6 @@ const callQwenAPI = async (prompt: string): Promise<string> => {
     const headers: Record<string, string> = {
       'Content-Type': 'application/json'
     };
-
-    // 生产环境需要添加Authorization头
-    if (!isDev) {
-      headers['Authorization'] = `Bearer ${import.meta.env.VITE_QWEN_API_KEY}`;
-    }
 
     const response = await axios.post(
       QWEN_API_URL,
