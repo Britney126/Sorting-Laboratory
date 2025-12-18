@@ -1,5 +1,7 @@
 {
   "functions": {
-    "api/qwen.ts": {}
+    "api/qwen.ts": {
+      "maxDuration": 10
+    }
   }
 }
